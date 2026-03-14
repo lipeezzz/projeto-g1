@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+nav {
+    background-color: white;
+    width: 100%;
+    height: 48px;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+nav div ul {
+    display: flex;
+    list-style: none;
+
+}
+
+nav div ul li {
+    margin: 13px;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+#azul {
+    color: #0669DF;
+}
+
+#azul:hover {
+    cursor: pointer;
+    padding-bottom: 15px;
+    border-bottom: #0669DF 2px solid;
+}
+
+#vermelho {
+    color: #C4170C;
+}
+
+#vermelho:hover {
+    cursor: pointer;
+    padding-bottom: 15px;
+    border-bottom: #C4170C 2px solid;
+}
+
+#verde {
+    color: #06AA48;
+}
+
+#verde:hover {
+    cursor: pointer;
+    padding-bottom: 15px;
+    border-bottom: #06AA48 2px solid;
+}
+
+#laranja {
+    color: #FF6729;
+}
+
+#laranja:hover {
+    cursor: pointer;
+    padding-bottom: 15px;
+    border-bottom: #FF6729 2px solid;
+}
+
+#salmão {
+    color: #FB0334;
+}
+
+#salmão:hover {
+    cursor: pointer;
+    padding-bottom: 15px;
+    border-bottom: #FF6729 2px solid;
+}
+
+#vinho {
+    color: #FF6700;
+}
+
+#vinho:hover {
+    cursor: pointer;
+    padding-bottom: 15px;
+    border-bottom: #FF6700 2px solid;
+}
+
+#azul-escuro {
+    color: #1E4C9A;
+}
+
+#azul-escuro:hover {
+    cursor: pointer;
+    padding-bottom: 15px;
+    border-bottom: #1E4C9A 2px solid;
+}
+
+#verde-escuro {
+    color: #006767;
+}
+
+#verde-escuro:hover {
+    cursor: pointer;
+    padding-bottom: 15px;
+    border-bottom: #006767 2px solid;
+}
+
+
+
+header {
+    background-color: #C4170C;
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div#burguer {
+    height: 74px;
+    display: flex;
+    align-items: center;
+    margin: 0px 20px
+}
+
+div#burguer:hover {
+    cursor: pointer;
+}
+
+header h1 {
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3em;
+    
+}
+
+header h1:hover {
+    cursor: pointer;
+}
+
+
+div#search {
+    height: 74px;
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+#search section {
+    margin: 0px 15px;
+}
+
+#search #procurar:hover {
+    cursor: pointer;
+}
+
+#search #login:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.329);
+    border-radius: 50%;
+}
+
+
+body {
+    background-color: white;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+main {
+    width: 772px;
+}
