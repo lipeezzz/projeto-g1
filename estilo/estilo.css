@@ -170,8 +170,7 @@ div#search {
 
 
 body {
-    background-color: white;
-
+    background-color: #F9F9F9;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
@@ -179,5 +178,93 @@ body {
 }
 
 main {
-    width: 772px;
+    width: 791px;
+    margin: auto;
+}
+
+main #anuncio {
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#anuncio h1 {
+    border: 3px dotted rgba(0, 0, 0, 0.463);
+    padding: 40px 150px;
+}
+
+main #maior {
+    background-color: #FFFFFF;
+    height: 450px;
+    border: 2px solid #ECECEC;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 100px 0px;
+}
+
+#maior #pmaior1 {
+    margin: 25px 0px 0px 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333333;
+}
+
+#maior #maiorh1 {
+    margin: auto;
+}
+
+#maior h1 {
+    margin: 15% 0px 0px 15px;
+    color: #A6130A;
+    font-size: 2.5em;
+}
+
+#maior #pmaior2 {
+    margin: 0px 0px 120px 15px;
+    color: #414141;
+}
+
+.menores {
+    height: 250px;
+    display: flex;
+    border-width: 0px 0px 700px 0px;
+    border-bottom: #E0E0E0 1px solid;
+
+}
+
+.menores .imagens {
+    width: 350px;
+    height: 200px;
+    border-radius: 15px;
+    align-self: center;
+    margin: 0px 0px 0px 10px;
+}
+
+.notmenores {
+
+}
+
+.notmenores .menorh2 {
+    margin: 35px 0px 10px 25px;
+    color: #A6130A;
+}
+
+.notmenores .menorul {
+    margin: 0px 0px 10px 25px;
+}
+
+.notmenores .menorli {
+    margin: 0px 0px 10px 17px;
+    color: #A61320;
+}
+
+.menorli::marker {
+    color: #555555;
+}
+
+.notmenores p {
+    margin: 0px 0px 10px 25px;
+    color: #555555;
 }
