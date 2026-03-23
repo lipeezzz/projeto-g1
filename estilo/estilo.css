@@ -221,6 +221,11 @@ main #maior {
     font-size: 2.5em;
 }
 
+#maior h1:hover {
+    cursor: pointer;
+    color: #C4170C;
+}
+
 #maior #pmaior2 {
     margin: 0px 0px 120px 15px;
     color: #414141;
@@ -234,8 +239,16 @@ main #maior {
 
 }
 
+.menores #aviao {
+     width: 350px;
+    height: 200px;
+    border-radius: 15px;
+    align-self: center;
+    margin: 0px 0px 0px 10px;
+}
+
 .menores .imagens {
-    width: 350px;
+    width: 433px;
     height: 200px;
     border-radius: 15px;
     align-self: center;
@@ -251,6 +264,12 @@ main #maior {
     color: #A6130A;
 }
 
+.notmenores .menorh2:hover {
+    cursor: pointer;
+    color: #C4170C;
+}
+
+
 .notmenores .menorul {
     margin: 0px 0px 10px 25px;
 }
@@ -260,6 +279,11 @@ main #maior {
     color: #A61320;
 }
 
+.notmenores .menorli:hover {
+    cursor: pointer;
+    color: #C4170C;
+}
+
 .menorli::marker {
     color: #555555;
 }
@@ -267,4 +291,38 @@ main #maior {
 .notmenores p {
     margin: 0px 0px 10px 25px;
     color: #555555;
+}
+
+footer {
+    background-color: #C4170C;
+    height: 141px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer h2 {
+    color: white;
+    font-size: 2em;
+    margin: 10px 0px 10px 15px;
+}
+
+footer h2:hover {
+    cursor: pointer;
+}
+
+footer a {
+    color: white;
+    font-size: 0.8em;
+    margin: 0px 0px 10px 15px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    cursor: pointer;
+}
+
+footer p {
+    color: white;
+    font-size: 0.8em;
+    margin: 20px 0px 10px 15px;
 }
