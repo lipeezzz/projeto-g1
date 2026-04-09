@@ -11,7 +11,9 @@
 nav {
     background-color: white;
     width: 100%;
-    height: 48px;
+    min-height: 48px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Scroll suave no iOS */
 }
 
 nav div {
@@ -27,9 +29,14 @@ nav div ul {
 }
 
 nav div ul li {
-    margin: 13px;
     font-size: 1em;
     font-weight: 700;
+    height: 48px; /* Ocupa a altura total da nav */
+    padding-bottom: 0; 
+    border-bottom: 3px solid transparent; /* Borda na base do elemento */
+    display: flex; 
+    align-items: center; 
+    margin: 0 13px; /* Removido margem vertical (0) para encostar no topo/fundo */
 }
 
 #azul {
@@ -38,8 +45,8 @@ nav div ul li {
 
 #azul:hover {
     cursor: pointer;
-    padding-bottom: 15px;
-    border-bottom: #0669DF 2px solid;
+    /* padding-bottom e border-bottom já estão definidos no li */
+    border-bottom-color: #0669DF; /* Apenas muda a cor da borda */
 }
 
 #vermelho {
@@ -48,8 +55,7 @@ nav div ul li {
 
 #vermelho:hover {
     cursor: pointer;
-    padding-bottom: 15px;
-    border-bottom: #C4170C 2px solid;
+    border-bottom-color: #C4170C;
 }
 
 #verde {
@@ -58,8 +64,7 @@ nav div ul li {
 
 #verde:hover {
     cursor: pointer;
-    padding-bottom: 15px;
-    border-bottom: #06AA48 2px solid;
+    border-bottom-color: #06AA48;
 }
 
 #laranja {
@@ -68,8 +73,7 @@ nav div ul li {
 
 #laranja:hover {
     cursor: pointer;
-    padding-bottom: 15px;
-    border-bottom: #FF6729 2px solid;
+    border-bottom-color: #FF6729;
 }
 
 #salmão {
@@ -78,8 +82,7 @@ nav div ul li {
 
 #salmão:hover {
     cursor: pointer;
-    padding-bottom: 15px;
-    border-bottom: #FF6729 2px solid;
+    border-bottom-color: #FF6729; /* Mantido o original #FF6729 */
 }
 
 #vinho {
@@ -88,8 +91,7 @@ nav div ul li {
 
 #vinho:hover {
     cursor: pointer;
-    padding-bottom: 15px;
-    border-bottom: #FF6700 2px solid;
+    border-bottom-color: #FF6700;
 }
 
 #azul-escuro {
@@ -98,8 +100,7 @@ nav div ul li {
 
 #azul-escuro:hover {
     cursor: pointer;
-    padding-bottom: 15px;
-    border-bottom: #1E4C9A 2px solid;
+    border-bottom-color: #1E4C9A;
 }
 
 #verde-escuro {
@@ -108,8 +109,7 @@ nav div ul li {
 
 #verde-escuro:hover {
     cursor: pointer;
-    padding-bottom: 15px;
-    border-bottom: #006767 2px solid;
+    border-bottom-color: #006767;
 }
 
 
@@ -118,7 +118,8 @@ header {
     background-color: #C4170C;
     height: 74px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribui os ícones para as pontas */
+    position: relative; /* Necessário para ancorar o posicionamento absoluto do h1 */
 }
 
 div#burguer {
@@ -134,6 +135,9 @@ div#burguer:hover {
 
 header h1 {
     height: 74px;
+    position: absolute; /* Remove o h1 do fluxo do flexbox para centralização absoluta */
+    left: 50%;
+    transform: translateX(-50%); /* Garante que o centro do h1 coincida com o centro da tela */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,8 +182,10 @@ body {
 }
 
 main {
-    width: 791px;
+    max-width: 791px;
+    width: 100%;
     margin: auto;
+    padding: 0 15px;
 }
 
 main #anuncio {
@@ -191,12 +197,14 @@ main #anuncio {
 
 #anuncio h1 {
     border: 3px dotted rgba(0, 0, 0, 0.463);
-    padding: 40px 150px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
 }
 
 main #maior {
     background-color: #FFFFFF;
-    height: 450px;
+    min-height: 450px;
     border: 2px solid #ECECEC;
     border-radius: 15px;
     display: flex;
@@ -232,24 +240,26 @@ main #maior {
 }
 
 .menores {
-    height: 250px;
+    min-height: 250px;
     display: flex;
-    border-width: 0px 0px 700px 0px;
     border-bottom: #E0E0E0 1px solid;
-
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .menores #aviao {
-     width: 350px;
-    height: 200px;
+    max-width: 433px;
+    width: 100%;
+    height: 288px;
     border-radius: 15px;
     align-self: center;
     margin: 0px 0px 0px 10px;
 }
 
 .menores .imagens {
-    width: 433px;
-    height: 200px;
+    max-width: 433px;
+    width: 100%;
+    height: auto;
     border-radius: 15px;
     align-self: center;
     margin: 0px 0px 0px 10px;
@@ -295,9 +305,10 @@ main #maior {
 
 footer {
     background-color: #C4170C;
-    height: 141px;
+    min-height: 141px;
     display: flex;
     flex-direction: column;
+    padding: 20px 0;
 }
 
 footer h2 {
@@ -325,4 +336,53 @@ footer p {
     color: white;
     font-size: 0.8em;
     margin: 20px 0px 10px 15px;
+}
+
+@media (max-width: 768px) {
+    nav::-webkit-scrollbar {
+        display: none; /* Oculta a barra de scroll para um visual mais limpo */
+    }
+
+    nav div ul {
+        width: max-content; /* Garante que a lista ocupe todo o espaço horizontal necessário */
+    }
+
+    nav div ul li {
+        margin: 0 8px; /* Removido margem vertical no mobile também */
+        height: 48px;
+        white-space: nowrap; /* Impede que o texto do link quebre linha */
+    }
+
+    .menores {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .menores .imagens {
+        align-self: flex-start;
+    }
+
+    .menores #aviao {
+   
+    }
+
+    .menores .imagens, .menores #aviao {
+        width: 100%;
+        margin: 10px 0;
+        justify-content: left;
+        align-self: flex-start;
+        align-items: center;
+    }
+
+    .notmenores .menorh2, .notmenores p, .notmenores .menorul {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #maior h1 {
+        font-size: 1.8em;
+        margin-top: 5%;
+    }
 }
